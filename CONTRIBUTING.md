@@ -1,7 +1,7 @@
 # Contribute to the NVIDIA Container Toolkit
 
-Want to hack on the NVIDIA Container Toolkit Project? Awesome!
-We only require you to sign your work, the below section describes this!
+Want to hack on the NVIDIA Container Toolkit Project? Awesome! We only require
+you to sign your work, the below section describes this!
 
 ## Sign your work
 
@@ -57,4 +57,3 @@ Use your real name (sorry, no pseudonyms or anonymous contributions.)
 
 If you set your `user.name` and `user.email` git configs, you can sign your
 commit automatically with `git commit -s`.
-
