@@ -12,7 +12,7 @@ while [ $# -gt 0 ]; do
     case $arg in
         run|create)
             NV_DOCKER_ARGS+=("--runtime=nvidia")
-            if [ ! -z "${NV_GPU}" ]; then
+            if [ ! -z "$NV_GPU" ]; then
                 NV_DOCKER_ARGS+=(-e NVIDIA_VISIBLE_DEVICES="${NV_GPU// /,}")
             fi
             break
@@ -27,8 +27,8 @@ while [ $# -gt 0 ]; do
     esac
 done
 
-if [ ! -z $NV_DEBUG ]; then
+if [ ! -z "$NV_DEBUG" ]; then
     set -x
 fi
 
-exec $NV_DOCKER "${DOCKER_ARGS[@]}" "${NV_DOCKER_ARGS[@]}" "$@"
+exec "$NV_DOCKER" "${DOCKER_ARGS[@]}" "${NV_DOCKER_ARGS[@]}" "$@"
